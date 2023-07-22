@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary{
+    @apply bg-[#1a6a1a]
+}
+.text-primary{
+    @apply text-[#1a6a1a]
+}
+.text-secondary{
+    @apply text-yellow-300 
+}
+.btn-primary{
+    @apply bg-yellow-300 text-[#1a6a1a] px-4 py-2 font-semibold text-center hover:bg-[#1a6a1a] hover:text-yellow-300
+}
