@@ -1,9 +1,10 @@
 import React from 'react';
+import TopColleges from '../../components/TopColleges';
 
 const Home = () => {
     return (
         <div>
-            homw
+            <TopColleges></TopColleges>
         </div>
     );
 };

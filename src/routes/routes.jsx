@@ -3,6 +3,7 @@ import {
   } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Home from "../pages/Home/Home";
+import CollegeDetails from "../pages/CollegeDetails/CollegeDetails";
 
   const router = createBrowserRouter([
     {
@@ -12,7 +13,11 @@ import Home from "../pages/Home/Home";
         {
             path: "/",
             element: <Home></Home>
-        }
+        },
+        {
+            path: "/collegeDetails/:id",
+            element: <CollegeDetails></CollegeDetails>,
+        },
       ]
     },
   ]);
