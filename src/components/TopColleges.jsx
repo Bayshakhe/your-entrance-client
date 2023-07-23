@@ -59,7 +59,7 @@ const TopColleges = () => {
             <figure>
               <img
                 src={collegeImg}
-                className="h-56"
+                className="h-60 w-full"
                 alt="College Image"
               />
             </figure>

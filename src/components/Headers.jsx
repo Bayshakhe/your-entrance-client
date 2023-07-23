@@ -11,7 +11,7 @@ const Headers = () => {
         Home
       </NavLink>
       <NavLink
-        to="/colleges"
+        to="/allColleges"
         className={({ isActive }) => (isActive ? "text-secondary" : "")}
       >
         Colleges
