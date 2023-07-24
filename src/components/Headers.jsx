@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Headers = () => {
+  const {user} = useContext(AuthContext)
+
   const navlists = (
     <>
       <NavLink
@@ -28,8 +31,11 @@ const Headers = () => {
       >
         My College
       </NavLink>
-      <Link to='/login' className="btn-primary">Login
-      </Link>
+      {
+        user? <Link to="/profile" className="btn-primary">{user.displayName}</Link> : <Link to='/login' className="btn-primary">Login
+        </Link>
+      }
+      
     </>
   );
   return (
