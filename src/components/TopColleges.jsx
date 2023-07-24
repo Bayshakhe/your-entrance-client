@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const TopColleges = () => {
   const [colleges, setColleges] = useState([]);
-  // console.log(colleges)
+  console.log(colleges)
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/allColleges`)
       .then((res) => res.json())
@@ -50,8 +50,8 @@ const TopColleges = () => {
         </div>
       </div>
 
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-5">
-        {colleges.slice(0,3).map(({_id, admissionDate, collegeImg, collegeName, events, researches, sports, rating}) => (
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 mx-8">
+        {colleges.slice(0,3).map(({_id, admissionDate, collegeImg, collegeName, events, researches, rating}) => (
           <div
             key={_id}
             className="card w-full card-compact bg-base-100 shadow-xl"
@@ -67,6 +67,7 @@ const TopColleges = () => {
               <h2 className="card-title">{collegeName}</h2>
               <p className="text-primary font-semibold">Admission Date: {admissionDate}</p>
               <p><span className="font-semibold underline">Most Popular Researches:</span> {researches[0].title}</p>
+              <p><span className="font-semibold underline">Most Popular Researches:</span> {events[0].eventName}</p>
               <p>Rating: {rating}</p>
               <div className="card-actions justify-end">
                 <Link to={`/collegeDetails/${_id}`} className="btn btn-secondary" >Details</Link>

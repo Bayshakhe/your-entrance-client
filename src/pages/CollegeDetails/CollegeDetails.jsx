@@ -44,16 +44,19 @@ const CollegeDetails = () => {
             <li key={i}>{a}</li>
           ))}
         </p>
-        <p>
-          <span className="text-primary text-xl font-semibold underline">
+          <p className="text-primary text-xl font-semibold underline">
             Most Popular Researches:
-          </span>{" "}
+          </p>
           {college?.researches.map((a,i) => <div className="my-3" key={i}>
             <p className="text-secondary">{a.title}</p>
             <p className="text-primary">Author: {a.author}</p>
-            <p>{a.summery.slice(0,250)}</p>
+            <p>{a.summery.slice(0,300)}</p>
           </div>)}
-        </p>
+          <p className="text-primary text-xl font-semibold underline">
+          Sports:
+          </p>
+          <p className="text-secondary"> {college?.sports[0].department}</p>
+            <p> {college?.sports[0].details}</p>
       </div>
     </div>
   );

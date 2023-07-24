@@ -20,8 +20,8 @@ const Gallary = () => {
     ]
     return (
         <div>
-            <h2 className='text-primary text-center text-5xl underline mt-20 mb-10 lg:mt-32'><span className='bg-yellow-300'>Gallary of Graduate&apos;s</span></h2>
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3'>
+            <h2 className='text-primary text-center text-3xl lg:text-5xl underline mt-20 mb-10 lg:mt-32'><span className='bg-yellow-300'>Gallary of Graduate&apos;s</span></h2>
+            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mx-5 lg:mx-10'>
                 {
                     images.map((i,index) => <img className='h-40 w-full' src={i.image} alt="Graduate's group photo" key={index} />)
                 }

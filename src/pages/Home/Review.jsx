@@ -18,11 +18,11 @@ const Review = () => {
 
   return (
     <div>
-      <h2 className="text-primary text-center text-5xl underline mt-20 mb-10 lg:mt-32">
+      <h2 className="text-primary text-center text-3xl lg:text-5xl underline mt-20 mb-10 lg:mt-32">
         <span className="bg-yellow-300">Review & Feedback</span>
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5" >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mx-5 mb-5" >
         {allReviews.map(({ _id, universityName, universityImg, reviews }) => (
           <div
             key={_id}
